@@ -48,7 +48,7 @@ body {
     height: 100vh; */
     
     /* background-color: rgba(0, 0, 0, 0.911); */
-    height: 100%;
+    height: 100vh;
     background-color: rgba(31, 30, 30, 0.418);
 }
 
@@ -97,12 +97,13 @@ body {
     border: 2px solid orange;
     border-radius: 25px;
     
-    transition: width,font-size 1s ease-in-out;
+    /* transition: width,font-size 1s ease-in-out; */
 }
 .btnPrimary:hover {
-    /* color: #000; */
-    font-size: 17px;
-    width: 160px;
+    color: #000;
+    border: 2px solid black;
+    /* font-size: 17px;
+    width: 160px; */
 }
 
 /* Utilities */
@@ -113,15 +114,16 @@ body {
     text-align: justify;
 }
 /* Service Section */
-.services-container {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+#services-container {
+    /* outline: 1px solid red; */
+    border-radius: 10px;
     margin: 10px;
     padding: 20px;
-    height: 200px;
+    /* height: 200px; */
     background-color: white;
     display: flex;
     flex-direction: column;
+    box-shadow: 10px 10px 10px rgb(179, 179, 179);
 }
 .service-box-container {
     /* outline: 2px solid red; */
@@ -147,4 +149,46 @@ body {
     height: 100px;
     display: block;
     margin: 0px auto;
+}
+/* Clients section */
+#clients-section-container {
+    /* outline: 1px solid red; */
+    border-radius: 10px;
+    margin: 10px;
+    /* padding: 20px; */
+    /* background-color: rgba(51, 51, 51, 0.342); */
+}
+#clients-section-container::before {
+    /* outline: 10px solid blue; */
+    content: "";
+    padding: 10px;
+    background-image: url('/assets/clients/client-3691432_1920.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+}
+.clients-head {
+    padding: 10px;
+}
+.clients-container {
+    /* outline: solid blue 2px; */
+    padding: 10px;
+    display: flex;
+    margin-top: 100px;
+}
+.clients-container img {
+    margin: 10px auto;
+    height: 150px;
+}
+/* footer */
+.footer {
+    height: 50vh;
+    color: white;
+    background-color: rgb(44, 44, 44);
 }
