@@ -1,0 +1,105 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    /* outline: 1px solid red; */
+    background-color: rgba(31, 30, 30, 0.418);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media (max-width: 450px) {
+    .navbar {
+        /* background-color: red; */
+
+    }
+}
+.navbar img {
+    height: 45px;
+    width: 45px;
+    filter: invert(100%);
+    display: flex;
+    justify-content: flex-start;
+}
+.navItem {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-right: 10px;
+}
+.navItem a {
+    text-decoration: none;
+    color: white;
+}
+
+.mainContainer {
+    /* background-image: url('../assets/images/spaghetti-g2e18d334e_1920.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; */
+    
+    /* background-color: rgba(0, 0, 0, 0.911); */
+    height: 100vh;
+    background-color: rgba(31, 30, 30, 0.418);
+}
+
+.header {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.headTitle {
+    margin: 65px auto;
+}
+.headTitle h1 {
+    font-size: 70px;
+    font-family: 'Sedgwick Ave', cursive;
+    /* margin: 50px; */
+}
+.headDesc {
+    margin: 10px auto;
+}
+.headDesc h2 {
+    font-family: 'Sedgwick Ave', cursive;
+}
+.mainContainer::before{
+    content: "";
+    background-image: url('../assets/images/spaghetti-g2e18d334e_1920.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    position: absolute;
+    z-index: -1;
+}
+.btnOrderNow {
+    margin: 10px;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    font-weight: bolder;
+    /* background-color: rgba(0, 0, 0, 0.13); */
+    background: rgba(122, 122, 122, 0.418);
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 25px;
+    
+    /* transition: all 1s ease-in-out; */
+}
+.btnOrderNow:hover {
+    background-color: orange;
+    border: 2px solid orange;
+    color: white;
+}
