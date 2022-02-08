@@ -14,17 +14,14 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
 }
-@media (max-width: 450px) {
-    .navbar {
-        /* background-color: red; */
 
-    }
-}
 .navbar img {
-    height: 45px;
-    width: 45px;
-    filter: invert(100%);
+    height: 70px;
+    width: 70px;
+    /* filter: invert(100%); */
     display: flex;
     justify-content: flex-start;
 }
@@ -39,6 +36,10 @@ body {
     color: white;
 }
 
+.navItem a:hover{
+    text-decoration: underline;
+    color: orange;
+}
 .mainContainer {
     /* background-image: url('../assets/images/spaghetti-g2e18d334e_1920.jpg');
     background-position: center;
@@ -47,7 +48,7 @@ body {
     height: 100vh; */
     
     /* background-color: rgba(0, 0, 0, 0.911); */
-    height: 100vh;
+    height: 100%;
     background-color: rgba(31, 30, 30, 0.418);
 }
 
@@ -72,34 +73,78 @@ body {
 .headDesc h2 {
     font-family: 'Sedgwick Ave', cursive;
 }
-.mainContainer::before{
+.header::before{
     content: "";
     background-image: url('../assets/images/spaghetti-g2e18d334e_1920.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     opacity: 1;
     position: absolute;
     z-index: -1;
 }
-.btnOrderNow {
+.btnPrimary {
     margin: 10px;
     cursor: pointer;
     height: 50px;
     width: 150px;
     font-weight: bolder;
     /* background-color: rgba(0, 0, 0, 0.13); */
-    background: rgba(122, 122, 122, 0.418);
-    color: orange;
+    background: orange;
+    color: white;
     border: 2px solid orange;
     border-radius: 25px;
     
-    /* transition: all 1s ease-in-out; */
+    transition: width,font-size 1s ease-in-out;
 }
-.btnOrderNow:hover {
-    background-color: orange;
-    border: 2px solid orange;
-    color: white;
+.btnPrimary:hover {
+    /* color: #000; */
+    font-size: 17px;
+    width: 160px;
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+.text-content {
+    text-align: justify;
+}
+/* Service Section */
+.services-container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.service-box-container {
+    /* outline: 2px solid red; */
+    display: flex;
+
+}
+
+.service-box {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    /* border: 2px solid orange; */
+    /* outline: 2px solid black; */
+    transition: box-shadow 1s ease-in-out;
+}
+.service-box:hover {
+    
+    /* border: 2px solid orange; */
+    box-shadow: 10px 10px 10px rgb(255, 215, 140);
+}
+.service-box img {
+    /* outline: 1px solid red; */
+    height: 100px;
+    display: block;
+    margin: 0px auto;
 }
